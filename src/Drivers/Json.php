@@ -8,10 +8,13 @@ use DNT\Setting\Exceptions\SaveSettingException;
 use DNT\Setting\Exceptions\UnreadableException;
 use DNT\Setting\Exceptions\UnwritableException;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Traits\Macroable;
 use Throwable;
 
 class Json extends BaseDriver
 {
+    use Macroable;
+
     /**
      * @inheritDoc
      */

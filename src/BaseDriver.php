@@ -5,9 +5,12 @@ namespace DNT\Setting;
 use DNT\Setting\Contracts\Setting as Contract;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Traits\Macroable;
 
 abstract class BaseDriver implements Contract
 {
+    use Macroable;
+
     protected Config $config;
 
     /**
