@@ -14,8 +14,9 @@ if (!function_exists('setting')) {
      */
     function setting($key = null, $default = null): mixed
     {
-        $setting = app('setting');
-        if (is_null($key)) {
+        $setting = app(Setting::class);
+        // https://www.php.net/manual/en/function.is-null.php#84161
+        if ($key === null) {
             return $setting;
         }
         if (is_array($key)) {
