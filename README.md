@@ -161,6 +161,34 @@ The library throws the following exceptions:
 
 You can handle these exceptions in your application to provide custom error handling or debugging.
 
+#### 7. Override Configurations
+
+The package allows you to override configurations using the settings defined in the package. This feature is useful when
+you want to dynamically change the configuration values during runtime.
+
+To define the overridden configurations, you can make use of the `overrides` configuration option in
+the `config/setting.php` file.
+The `overrides` configuration accepts an array where the keys represent the configuration keys to be overridden, and the
+values represent the new values to be set.
+
+Here's an example of how to define overridden configurations:
+
+```php
+<?php
+return [
+    // ...
+
+    'overrides' => [
+        'app.debug',
+        'app.locale',
+        'mail.mailers.smtp.host',
+        'database.default',
+        // Add more overridden configurations as needed
+    ],
+
+    // ...
+];
+
 ### Testing
 
 ```php
