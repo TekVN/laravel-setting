@@ -2,6 +2,7 @@
 
 namespace DNT\Setting;
 
+use DNT\Setting\Contracts\Setting as SettingContract;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
@@ -14,6 +15,9 @@ class SettingServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom($this->getConfigPath(), 'setting');
 
+        $this->app->bind(SettingContract::class, function (Application $app) {
+            return $app->make('setting')->driver();
+        });
         $this->app->singleton('setting', function (Application $app) {
             return new Setting($app);
         });
@@ -42,7 +46,29 @@ class SettingServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 $this->getConfigPath() => $this->app->configPath('setting.php')
-            ], 'setting');
+            ], 'config');
+        }
+
+        $this->overrideConfig();
+    }
+
+    /**
+     * Override configurations with Settings.
+     *
+     * This method overrides the configurations with the settings
+     * obtained from the Setting library. It loops through the overridden
+     * settings and updates the corresponding configurations.
+     *
+     * @return void
+     */
+    private function overrideConfig(): void
+    {
+        $overrides = config('setting.overrides');
+
+        foreach ($overrides as $key) {
+            if (Facade::has($key)) {
+                config([$key => Facade::get($key)]);
+            }
         }
     }
 }

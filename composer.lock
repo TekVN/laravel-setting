@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92a83172246a6107d360d911aac46b37",
+    "content-hash": "0ea7321fc1c4a666ef01baa674896d85",
     "packages": [
         {
             "name": "brick/math",
@@ -8783,7 +8783,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "pestphp/pest": 20,
-        "pestphp/pest-plugin-laravel": 20
+        "pestphp/pest-plugin-laravel": 20,
+        "orchestra/testbench": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
