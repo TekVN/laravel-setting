@@ -44,6 +44,10 @@ class SettingServiceProvider extends ServiceProvider implements DeferrableProvid
         $this->publishes([
             dirname(__DIR__).'/config/setting.php' => $this->app->configPath('setting.php'),
         ], 'config');
+
+        $this->publishes([
+            dirname(__DIR__).'/database/migrations' => $this->app->databasePath('migrations'),
+        ], 'migration');
     }
 
     private function registerConfiguration(): void
