@@ -1,0 +1,54 @@
+{
+  "name": "dnt/laravel-setting",
+  "description": "Simple Setting for Laravel Framework.",
+  "type": "library",
+  "license": "MIT",
+  "version": "1.0.0",
+  "autoload": {
+    "psr-4": {
+      "DNT\\Setting\\": "src/"
+    },
+    "files": [
+      "src/helper.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "DNT",
+      "email": "ducconit@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.3",
+    "illuminate/support": "^10.0||^11.0||^12.0@dev",
+    "illuminate/database": "^10.0||^11.0||^12.0@dev",
+    "illuminate/console": "^10.0||^11.0||^12.0@dev"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DNT\\Setting\\SettingServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "fix": "vendor/bin/pint"
+  },
+  "require-dev": {
+    "pestphp/pest": "3.x-dev",
+    "orchestra/testbench": "9.x-dev",
+    "laravel/pint": "dev-main"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
