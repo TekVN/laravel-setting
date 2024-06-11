@@ -1,10 +1,10 @@
 <?php
 
-namespace DNT\Setting;
+namespace TekVN\Setting;
 
-use DNT\Setting\Contracts\Store;
-use DNT\Setting\Stores\DatabaseStore;
-use DNT\Setting\Stores\FileStore;
+use TekVN\Setting\Contracts\Store;
+use TekVN\Setting\Stores\DatabaseStore;
+use TekVN\Setting\Stores\FileStore;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Support\Manager;
 use Override;

@@ -1,9 +1,9 @@
 <?php
 
-namespace DNT\Setting;
+namespace TekVN\Setting;
 
-use DNT\Setting\Contracts\Group;
-use DNT\Setting\Contracts\Store;
+use TekVN\Setting\Contracts\Group;
+use TekVN\Setting\Contracts\Store;
 use Illuminate\Support\Facades\App;
 
 abstract class SettingGroup implements Group

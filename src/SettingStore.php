@@ -1,10 +1,10 @@
 <?php
 
-namespace DNT\Setting;
+namespace TekVN\Setting;
 
-use DNT\Setting\Contracts\Store;
-use DNT\Setting\Events\SettingSavedEvent;
-use DNT\Setting\Events\SettingSavingEvent;
+use TekVN\Setting\Contracts\Store;
+use TekVN\Setting\Events\SettingSavedEvent;
+use TekVN\Setting\Events\SettingSavingEvent;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Traits\Macroable;

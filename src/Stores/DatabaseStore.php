@@ -1,8 +1,8 @@
 <?php
 
-namespace DNT\Setting\Stores;
+namespace TekVN\Setting\Stores;
 
-use DNT\Setting\SettingStore;
+use TekVN\Setting\SettingStore;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Str;

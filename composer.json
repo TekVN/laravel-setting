@@ -1,12 +1,12 @@
 {
-  "name": "dnt/laravel-setting",
+  "name": "tekvn/laravel-setting",
   "description": "Simple Setting for Laravel Framework.",
   "type": "library",
   "license": "MIT",
   "version": "1.0.0",
   "autoload": {
     "psr-4": {
-      "DNT\\Setting\\": "src/"
+      "TekVN\\Setting\\": "src/"
     },
     "files": [
       "src/helper.php"
@@ -33,7 +33,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "DNT\\Setting\\SettingServiceProvider"
+        "TekVN\\Setting\\SettingServiceProvider"
       ]
     }
   },

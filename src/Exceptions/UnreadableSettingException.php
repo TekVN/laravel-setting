@@ -1,6 +1,6 @@
 <?php
 
-namespace DNT\Setting\Exceptions;
+namespace TekVN\Setting\Exceptions;
 
 use Exception;
 

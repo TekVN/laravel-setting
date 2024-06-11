@@ -1,10 +1,10 @@
 <?php
 
-namespace DNT\Setting\Stores;
+namespace TekVN\Setting\Stores;
 
-use DNT\Setting\Exceptions\UnreadableSettingException;
-use DNT\Setting\Exceptions\UnwritableSettingException;
-use DNT\Setting\SettingStore;
+use TekVN\Setting\Exceptions\UnreadableSettingException;
+use TekVN\Setting\Exceptions\UnwritableSettingException;
+use TekVN\Setting\SettingStore;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 

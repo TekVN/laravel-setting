@@ -1,6 +1,6 @@
 <?php
 
-namespace DNT\Setting;
+namespace TekVN\Setting;
 
 use Illuminate\Contracts\Events\Dispatcher;
 

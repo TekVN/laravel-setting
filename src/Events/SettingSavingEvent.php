@@ -1,8 +1,8 @@
 <?php
 
-namespace DNT\Setting\Events;
+namespace TekVN\Setting\Events;
 
-use DNT\Setting\Contracts\Store;
+use TekVN\Setting\Contracts\Store;
 
 class SettingSavingEvent
 {

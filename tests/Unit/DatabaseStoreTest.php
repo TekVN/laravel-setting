@@ -1,8 +1,8 @@
 <?php
 
-use DNT\Setting\Contracts\Store;
-use DNT\Setting\SettingStore;
-use DNT\Setting\Stores\DatabaseStore;
+use TekVN\Setting\Contracts\Store;
+use TekVN\Setting\SettingStore;
+use TekVN\Setting\Stores\DatabaseStore;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 $defaultDataDatabase = [

@@ -1,8 +1,8 @@
 <?php
 
-use DNT\Setting\Contracts\Store;
-use DNT\Setting\SettingStore;
-use DNT\Setting\Stores\FileStore;
+use TekVN\Setting\Contracts\Store;
+use TekVN\Setting\SettingStore;
+use TekVN\Setting\Stores\FileStore;
 
 $paths = [
     tmpfile(),

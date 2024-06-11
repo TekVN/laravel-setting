@@ -1,6 +1,6 @@
 <?php
 
-namespace DNT\Setting\Models;
+namespace TekVN\Setting\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -19,7 +19,7 @@ một cách dễ dàng. Mặc dù ban đầu package này được phát triển
 Bạn có thể cài đặt package này thông qua Composer:
 
 ```bash
-composer require dnt/laravel-setting
+composer require tekvn/laravel-setting
 ```
 
 ## Cấu hình
@@ -27,7 +27,7 @@ composer require dnt/laravel-setting
 Nếu bạn không muốn sử dụng cấu hình mặc định. Hãy `publish` config và bạn có thể thay đổi chúng
 
 ```bash
-php artisan vendor:publish --provider="DNT\Setting\SettingServiceProvider"
+php artisan vendor:publish --provider="TekVN\Setting\SettingServiceProvider"
 ```
 
 ## Sử dụng
@@ -35,7 +35,7 @@ php artisan vendor:publish --provider="DNT\Setting\SettingServiceProvider"
 Để sử dụng các chức năng của package, bạn có thể làm theo ví dụ dưới đây:
 
 ```php
-use DNT\Setting\Facade as Setting;
+use TekVN\Setting\Facade as Setting;
 
 // Lưu một cài đặt
 Setting::set('site_name', 'Laravel Setting');
@@ -57,7 +57,7 @@ Setting::all();
 Chúng tôi đưa ra cơ chế quản lý cài đặt theo nhóm. Tuy nhiên giá trị này có mặc định là `default`
 
 ```php
-use DNT\Setting\Facade as Setting;
+use TekVN\Setting\Facade as Setting;
 
 // Lưu một cài đặt
 Setting::set('site_name', 'Laravel Setting', 'general');

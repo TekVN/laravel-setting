@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use DNT\Setting\SettingServiceProvider;
+use TekVN\Setting\SettingServiceProvider;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 

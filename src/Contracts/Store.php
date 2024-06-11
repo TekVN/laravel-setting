@@ -1,6 +1,6 @@
 <?php
 
-namespace DNT\Setting\Contracts;
+namespace TekVN\Setting\Contracts;
 
 interface Store
 {
