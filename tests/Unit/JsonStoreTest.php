@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Str;
 use TekVN\Setting\Contracts\Store;
 use TekVN\Setting\SettingStore;
 use TekVN\Setting\Stores\FileStore;
@@ -64,4 +65,20 @@ test('Read all setting', function ($path) {
     expect($store->all())->toMatchArray($data)
         ->and($store->allFromGroup('not_exists'))->toBeArray()->toBeEmpty()
         ->and($store->allFromGroup('default'))->toMatchArray($data['default']);
+})->with('path');
+
+test('Set value for key', function ($path) {
+    new FileStore(compact('path'));
+
+    if (is_resource($path)) {
+        $resource = stream_get_meta_data($path);
+        $path = $resource['uri'];
+    }
+    $store = new FileStore(compact('path'));
+
+    $store->set('key1', 'value1');
+
+    expect($store->allFromGroup('default'))->toMatchArray([
+        'key1' => 'value1',
+    ]);
 })->with('path');

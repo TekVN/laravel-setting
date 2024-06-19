@@ -66,10 +66,9 @@ test('Read all setting', function () use ($defaultRecordSetting, $defaultDataDat
 test('Set value for key', function () {
     $store = new DatabaseStore([]);
 
-    $value = $store->set('key1', 'value1');
+    $store->set('key1', 'value1');
 
-    expect($value)->toEqual($value)
-        ->and($store->allFromGroup('default'))->toMatchArray([
+    expect($store->allFromGroup('default'))->toMatchArray([
             'key1' => 'value1',
         ]);
 });

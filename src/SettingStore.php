@@ -43,7 +43,7 @@ abstract class SettingStore implements Store
      * {@inheritDoc}
      */
     #[\Override]
-    public function set(string|array $key, mixed $value = null, string $group = 'default'): mixed
+    public function set(string|array $key, mixed $value = null, string $group = 'default'): void
     {
         $this->loadIfMissing();
 
@@ -53,8 +53,6 @@ abstract class SettingStore implements Store
         }
 
         $this->save();
-
-        return $this->get(key: $key, group: $group);
     }
 
     /**

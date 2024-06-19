@@ -12,7 +12,7 @@ interface Store
     /**
      * Đặt giá trị mới cho $key
      */
-    public function set(string|array $key, mixed $value = null, string $group = 'default'): mixed;
+    public function set(string|array $key, mixed $value = null, string $group = 'default'): void;
 
     /**
      * Kiểm tra $key đã có chưa
