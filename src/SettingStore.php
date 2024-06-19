@@ -28,9 +28,13 @@ abstract class SettingStore implements Store
      * {@inheritDoc}
      */
     #[\Override]
-    public function get(string $key, mixed $default = null, string $group = 'default'): mixed
+    public function get(string|array $key, mixed $default = null, string $group = 'default'): mixed
     {
         $this->loadIfMissing();
+
+        if (is_array($key)) {
+            return Arr::only($this->allFromGroup($group), $key);
+        }
 
         return Arr::get($this->resources, sprintf('%s.%s', $group, $key), $default);
     }

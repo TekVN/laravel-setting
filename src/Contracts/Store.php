@@ -7,7 +7,7 @@ interface Store
     /**
      * Truy xuất một mục từ cài đặt bằng $key.
      */
-    public function get(string $key, mixed $default = null, string $group = 'default'): mixed;
+    public function get(string|array $key, mixed $default = null, string $group = 'default'): mixed;
 
     /**
      * Đặt giá trị mới cho $key

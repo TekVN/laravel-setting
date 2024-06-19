@@ -71,4 +71,14 @@ class FileStore extends SettingStore
         }
         @mkdir($dir, 0755, true);
     }
+
+    /**
+     * @throws UnreadableSettingException
+     * @throws UnwritableSettingException
+     */
+    #[\Override] protected function saveToStore(array $records): void
+    {
+        $flags = $this->getConfig('options.json_encode', JSON_ERROR_NONE);
+        file_put_contents($this->resolvePath(), json_encode($records, flags: $flags));
+    }
 }

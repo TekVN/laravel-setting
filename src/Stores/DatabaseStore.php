@@ -2,10 +2,10 @@
 
 namespace TekVN\Setting\Stores;
 
+use Illuminate\Support\Str;
 use TekVN\Setting\SettingStore;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
-use Str;
 
 class DatabaseStore extends SettingStore
 {

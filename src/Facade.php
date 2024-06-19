@@ -4,6 +4,9 @@ namespace TekVN\Setting;
 
 use Illuminate\Support\Facades\Facade as BaseFacade;
 
+/**
+ * @mixin SettingStore
+ */
 class Facade extends BaseFacade
 {
     /**

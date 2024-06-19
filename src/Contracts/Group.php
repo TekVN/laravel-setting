@@ -23,12 +23,12 @@ interface Group
      * Lấy chi tiết 1 cài đặt cụ thể. Nếu không tìm thấy thì $default sẽ được trả về
      * Lưu ý: nếu $default là 1 Closure thì gía trị của nó sẽ được trả về
      */
-    public function get(string $key, mixed $default = null): mixed;
+    public function get(string|array $key, mixed $default = null): mixed;
 
     /**
      * Đặt giá trị mới cho $key. Nếu $value là Closure thì giá trị của nó sẽ được lưu
      */
-    public function set(string $key, mixed $value = null): void;
+    public function set(string|array $key, mixed $value = null): void;
 
     /**
      * Trả về driver store đang sử dụng

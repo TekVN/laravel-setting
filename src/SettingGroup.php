@@ -6,7 +6,7 @@ use TekVN\Setting\Contracts\Group;
 use TekVN\Setting\Contracts\Store;
 use Illuminate\Support\Facades\App;
 
-abstract class SettingGroup implements Group
+class SettingGroup implements Group
 {
     protected Store $store;
 
@@ -47,7 +47,7 @@ abstract class SettingGroup implements Group
      * {@inheritDoc}
      */
     #[\Override]
-    public function get(string $key, mixed $default = null): mixed
+    public function get(string|array $key, mixed $default = null): mixed
     {
         return $this->getStore()->get($key, $default, $this->getGroupName());
     }
@@ -56,7 +56,7 @@ abstract class SettingGroup implements Group
      * {@inheritDoc}
      */
     #[\Override]
-    public function set(string $key, mixed $value = null): void
+    public function set(string|array $key, mixed $value = null): void
     {
         $this->getStore()->set($key, $value, $this->getGroupName());
     }

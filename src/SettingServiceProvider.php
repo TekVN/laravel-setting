@@ -6,6 +6,9 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
+use TekVN\Setting\Contracts\Group;
+use TekVN\Setting\Contracts\SettingManager;
+use TekVN\Setting\Contracts\Store;
 
 class SettingServiceProvider extends ServiceProvider implements DeferrableProvider
 {
@@ -16,13 +19,17 @@ class SettingServiceProvider extends ServiceProvider implements DeferrableProvid
     {
         $this->registerConfiguration();
 
-        $this->app->singleton('setting', function (Application $app) {
+        $this->app->singleton(SettingManager::class, function (Application $app) {
             return new StoreManager($app);
         });
 
-        $this->app->singleton('setting.store', function (Application $app) {
+        $this->app->singleton(Store::class, function (Application $app) {
             return $app->make('setting')->driver();
         });
+
+        $this->app->bind('setting', SettingManager::class);
+        $this->app->bind('setting.store', Store::class);
+        $this->app->bind('setting.group', Group::class);
     }
 
     /**
